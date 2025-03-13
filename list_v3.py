@@ -5,7 +5,7 @@ This version is upgraded from list_v3.py(Ver1)
 from argparse import ArgumentParser, Namespace
 import boto3, sys, os
 from datetime import datetime
-#from dotenv import load_dotenv
+from dotenv import load_dotenv
 
 parser = ArgumentParser()
 #parser.usage
@@ -20,7 +20,7 @@ group.add_argument("-ao", "--allObjects", help = ":List all S3 objects", action 
 args : Namespace = parser.parse_args()
 
 # Load file .env
-#load_dotenv()
+load_dotenv()
 
 # Read parameter from .env (environment variable)
 ENDPOINT_URL = os.getenv('S3_ENDPOINT')
